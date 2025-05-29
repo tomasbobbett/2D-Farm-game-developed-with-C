@@ -85,3 +85,33 @@ primeros 10, se pudre.<br>
 Sembrar semillas de Lechuga cuesta 20 monedas. Cada cosecha de Lechuga (cada cultivo) sale 80 monedas. Vive
 durante 15 movimientos, pasados los 10 ya crece y se puede cosechar, pero pasados 5 movimientos después de los
 primeros 10, se pudre.<br>
+
+<h2>Game Controls</h2>
+El personaje se podrá mover en 4 direcciones:<br>
+Arriba: <b>W</b><br>
+Abajo: <b>S</b><br>
+Derecha: <b>D</b><br>
+Izquierda:<b>A</b><br>
+El personaje <b>no</b> podrá salir del terreno, osea que si Blancanieves se encuentra en la primera fila y trata de moverse
+para arriba no moverá y tampoco contará como movimiento.<br>
+
+Para sembrar, <b>Blancanieves</b> debe estar sobre un cultivo de una huerta y se usará la letra Z para sembrar zanahoria,
+T para sembrar tomate, L para sembrar lechuga, y B para sembrar brócoli.<br>
+
+Para usar el <b>insecticida</b>, Blancanieves debe estar sobre un cultivo de una huerta atacada por una plaga y se
+usará la letra I para activarlo sobre toda la huerta.<br>
+
+Para usar el <b>fertilizante</b>, Blancanieves debe estar sobre un cultivo de una huerta y se usará la letra F para
+activarlo sobre toda la huerta.<br>
+
+Para cosechar lo sembrado, se podrá hacer posicionándose sobre los cultivos cuando crezcan las plantas y cuando
+no haya pasado el tiempo límite para hacerlo. Si se posiciona sobre un cultivo que aún no está listo, no debe suceder
+nada. No se podrán cosechar verduras que tengan plaga.<br>
+
+<h2>Game Goal</h2>
+Para ganar el juego, Blancanieves tiene que ganar un total de 1000 monedas. La cantidad de monedas inicial
+dependerá del enanito resultante del TP1:<br>
+   Gruñón: 150 monedas<br>
+   Dormilón: 200 monedas<br>
+   Sabio: 250 monedas<br>
+   Feliz: 300 monedas<br>
