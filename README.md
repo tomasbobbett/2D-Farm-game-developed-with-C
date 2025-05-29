@@ -1,120 +1,114 @@
 # 2D-Farm-game-developed-with-C
-This is a university project where i had to develop a simple 2D game for the CMD. To run and test the game read the PDF and download the game folder. Then follow the instructions in the README text file :)
+This is a university project where I had to develop a simple 2D game for the CMD. To run and test the game in linux, read the PDF and download the game folder. Then follow the instructions in the README text file :)
 
 <h2>INSTRUCTIONS</h2>
-To run the game you should first compile the c files.<br>
-  1. First open the CMD inside the "game" folder.<br>
+To run the game on LINUX you should first compile the C files.<br>
+  1. First, open CMD inside the "game" folder.<br>
   2. Enter the following command "gcc *.c -o juego -std=c99 -Wall -Wconversion -Werror -lm" to compile the required files.<br>
-Now you are ready to play! just enter the line "./juego"<br>
+Now you are ready to play! Just enter the line "./juego"<br>
+
+<h2>Running the Game on Windows or macOS</h2>
+
+On both Windows and macOS, you can compile and run the game using a terminal.
+
+<strong>Windows:</strong><br>
+1. Open CMD or PowerShell inside the "game" folder.<br>
+2. Run the command:<br>
+<code>gcc *.c -o juego.exe -std=c99 -Wall -Wconversion -Werror -lm</code><br>
+3. Then run:<br>
+<code>juego.exe</code><br>
+(Requires GCC, like <a href="https://www.mingw-w64.org/">MinGW</a>)<br><br>
+
+<strong>macOS:</strong><br>
+1. Open Terminal inside the "game" folder.<br>
+2. Run the command:<br>
+<code>gcc *.c -o juego -std=c99 -Wall -Wconversion -Werror -lm</code><br>
+3. Then run:<br>
+<code>./juego</code><br>
+(Make sure Xcode Command Line Tools are installed)<br>
 
 <h2>GAME INFO</h2>
-<p>Desde que llegó Blancanieves a vivir con los enanitos, les contagió el amor por cuidar las plantas y pasar tiempo
-al aire libre. Y como ya no les alcanza el trabajo en la mina y les está costando llegar a fin de mes, decidieron invertir
-en comprar unos lotes de campo para ponerse a cosechar verduras, para luego venderlas y así poder ahorrar unas
-monedas.</p><br>
-Debemos ayudar a Blancanieves a cultivar su huerta para llegar a su objetivo
-de ahorro, que es juntar 1000 monedas. Si Blancanieves se queda sin monedas, pierde el juego.
-El juego consiste en un terreno donde se tendrán 3 huertas de 3x3 con distintas verduras, donde se deben plantar
-semillas, luego cosecharlas una vez que crecieron, y llevarlas al depósito para venderlas y así ganar monedas.
-Plantar cada tipo de verdura cuesta un monto distinto, así como cada verdura tiene un precio distinto al venderla.
-Se deberá esperar a que estén disponibles para cosechar para poder hacerlo.<br>
+<p>Since Snow White moved in with the dwarfs, she inspired them to care for plants and enjoy the outdoors. And since the mine job is no longer enough and they’re struggling to make ends meet, they decided to invest in buying some plots of land to grow vegetables, sell them, and save some coins.</p><br>
+We must help Snow White grow her garden to reach her savings goal of 1000 coins. If she runs out of coins, the game is over.  
+The game consists of a field where there are 3 plots (3x3) with different vegetables. You must plant seeds, harvest them once they’ve grown, and take them to the depot to sell and earn coins.  
+Planting each type of vegetable has a different cost, just as each one has a different selling price. You must wait until they are ready to be harvested.<br>
 
-<h3>Huertas</h3>
-Se tendrán 3 huertas de tamaño 3x3 (9 cultivos). Se podrá sembrar cualquier verdura en sus cultivos. Se deberá
-posicionar de manera aleatoria en el terreno el cultivo del medio y a partir de ese cultivo, se generarán los de alrededor.
-Si un cultivo excede límites del terreno, no deberá inicializarse.<br>
+<h3>Plots</h3>
+There are 3 plots of size 3x3 (9 crops). You can plant any vegetable in the plots. The center crop is randomly positioned in the field, and from that center, the surrounding crops are generated.  
+If a crop goes out of bounds, it should not be initialized.<br>
 
-<h3>Obstaculos</h3>
-Los obstáculos deben posicionarse aleatoriamente en el terreno. Cabe destacar que no puede posicionarse un
-obstáculo en la misma posición que otro objeto.<br>
+<h3>Obstacles</h3>
+Obstacles are randomly placed on the field. Note that an obstacle cannot be placed on the same position as another object.<br>
 
-<h3>Plagas</h3>
-Aparecen aleatoriamente sobre una posición del terreno cada 10 movimientos. Si aparecen arriba de alguna de las
-3 huertas, tendrás 10 movimientos para salvarlas, sino se pudrirán y desaparecerán.<br>
+<h3>Pests</h3>
+They appear randomly on the field every 10 moves. If they land on one of the 3 plots, you will have 10 moves to save them, otherwise they will rot and disappear.<br>
 
-<h3>Espinas</h3>
-Se posicionan 5 espinas aleatoriamente en el terreno al iniciar el juego, cada vez que Blancanieves pasa por arriba
-de una pierde 5 monedas.<br>
+<h3>Thorns</h3>
+Five thorns are randomly placed on the field at the beginning of the game. Every time Snow White steps on one, she loses 5 coins.<br>
 
-<h3>Herramientas</h3>
-Habrá herramientas para ayudar a Blancanieves con su misión:
+<h3>Tools</h3>
+There are tools to help Snow White in her mission:
 
-  <h4>Fertilizante</h4>
-Aparece un fertilizante cada 15 movimientos de forma aleatoria en el terreno. Cabe aclarar que no puede estar
-ubicado arriba de otro objeto o del personaje. Al activarlo sobre un cultivo de una huerta, hace que crezcan todas
-las verduras de esa huerta. Se agarran de a uno.<br>
+  <h4>Fertilizer</h4>
+A fertilizer appears every 15 moves randomly on the field. It cannot be placed over another object or the character.  
+When used on a plot's crop, it causes all the vegetables in that plot to grow. You pick them up one at a time.<br>
 
-  <h4>Insecticidas</h4>
-Al iniciar el juego, Blancanieves tiene 3 insecticidas disponibles para usar. Al activarse sobre un cultivo, curarán
-toda esa huerta de la plaga.<br>
+  <h4>Insecticides</h4>
+At the beginning of the game, Snow White has 3 insecticides available. When used on a crop, they will cure the entire plot from pests.<br>
 
-<h3>Depósito</h3>
-Se debe inicializar en una posición aleatoria. No puede superponerse con ningún objeto. Blancanieves debe poner
-ahí la cosecha para que le dé dinero. Una vez que está a distancia Manhattan 2 del depósito, se intercambian las
-verduras que haya cosechado por monedas.<br>
+<h3>Depot</h3>
+It is initialized at a random position. It cannot overlap with any other object. Snow White must take the harvested crops there to exchange them for coins.  
+Once she is within Manhattan distance 2 of the depot, the harvested vegetables are exchanged for coins.<br>
 
-<h3>Canasta</h3>
-Para cosechar las verduras, Blancanieves deberá posicionarse sobre un cultivo donde la verdura esté lista para
-cosechar y ésta se deberá agregar a la canasta de Blancanieves.
-La canasta puede llevar como máximo 6 verduras. Al llevarlas al depósito, la canasta se vacía y se podrá volver
-a cosechar más verduras.
-Aclaración: Una vez cosechadas, las verduras no se pudren.<br>
+<h3>Basket</h3>
+To harvest vegetables, Snow White must stand over a crop that is ready and it will be added to her basket.  
+The basket can carry up to 6 vegetables. When taken to the depot, the basket is emptied and she can harvest again.  
+Note: Once harvested, vegetables do not rot.<br>
 
-<h3>Plantas</h3>
-Todas las plantas tienen un precio a la hora de plantarse, y crecen después de una determinada cantidad de
-movimientos. Si alguna no se cosecha a tiempo desaparece y el cultivo queda disponible para plantar una nueva
-verdura:<br>
+<h3>Plants</h3>
+All plants have a cost to plant and grow after a certain number of moves.  
+If they are not harvested in time, they disappear and the crop becomes available for a new vegetable:<br>
 
-  <h4>Tomate</h4>
-Sembrar semillas de tomates cuesta 5 monedas. Cada cosecha de tomate (cada cultivo) te da 30 monedas. Vive
-durante 30 movimientos, pasados los 20 ya crece y se puede cosechar, pero pasados 10 movimientos después de los
-primeros 20, se pudre. Es decir, si planto un tomate y camino 20 movimientos, el tomate ya está maduro y lo puedo
-ir a buscar, a partir de este momento si tardo más de 10 movimientos ya no lo puedo cosechar y desaparece.<br>
+  <h4>Tomato</h4>
+Planting tomato seeds costs 5 coins. Each tomato harvest (per crop) gives you 30 coins.  
+It lasts 30 moves: after 20 it is grown and can be harvested, but if not picked within 10 more moves, it rots.  
+Example: if you plant a tomato and walk 20 moves, it is ready. If you take more than 10 additional moves, it disappears.<br>
 
-  <h4>Zanahoria</h4>
-Sembrar semillas de zanahoria cuesta 10 monedas. Cada cosecha de zanahoria (cada cultivo) te da 50 monedas.
-Vive durante 25 movimientos, pasados los 15 ya crece y se puede cosechar, pero pasados 10 movimientos después de
-los primeros 15, se pudre.<br>
+  <h4>Carrot</h4>
+Planting carrot seeds costs 10 coins. Each carrot harvest gives you 50 coins.  
+It lasts 25 moves: after 15 it is grown, and if not picked within 10 more moves, it rots.<br>
 
-  <h4>Brócoli</h4>
-Sembrar semillas de Brócoli cuesta 15 monedas. Cada cosecha de Brócoli (cada cultivo) sale 70 monedas. Vive
-durante 20 movimientos, pasados los 10 ya crece y se puede cosechar, pero pasados 15 movimientos después de los
-primeros 10, se pudre.<br>
+  <h4>Broccoli</h4>
+Planting broccoli seeds costs 15 coins. Each broccoli harvest gives you 70 coins.  
+It lasts 20 moves: after 10 it is grown, and if not picked within 15 more moves, it rots.<br>
 
-  <h4>Lechuga</h4>
-Sembrar semillas de Lechuga cuesta 20 monedas. Cada cosecha de Lechuga (cada cultivo) sale 80 monedas. Vive
-durante 15 movimientos, pasados los 10 ya crece y se puede cosechar, pero pasados 5 movimientos después de los
-primeros 10, se pudre.<br>
+  <h4>Lettuce</h4>
+Planting lettuce seeds costs 20 coins. Each lettuce harvest gives you 80 coins.  
+It lasts 15 moves: after 10 it is grown, and if not picked within 5 more moves, it rots.<br>
 
 <h2>Game Controls</h2>
-El personaje se podrá mover en 4 direcciones:<br>
-Arriba: <b>W</b><br>
-Abajo: <b>S</b><br>
-Derecha: <b>D</b><br>
-Izquierda:<b>A</b><br>
-El personaje <b>no</b> podrá salir del terreno, osea que si Blancanieves se encuentra en la primera fila y trata de moverse
-para arriba no moverá y tampoco contará como movimiento.<br>
+The character can move in 4 directions:<br>
+Up: <b>W</b><br>
+Down: <b>S</b><br>
+Right: <b>D</b><br>
+Left: <b>A</b><br>
+The character <b>cannot</b> leave the field. So, if Snow White is on the first row and tries to go up, she won’t move and it won’t count as a move.<br>
 
-Para sembrar, <b>Blancanieves</b> debe estar sobre un cultivo de una huerta y se usará la letra Z para sembrar zanahoria,
-T para sembrar tomate, L para sembrar lechuga, y B para sembrar brócoli.<br>
+To plant, <b>Snow White</b> must be on a plot's crop and press Z to plant carrot,  T for tomato, L for lettuce, and B for broccoli.<br>
 
-Para usar el <b>insecticida</b>, Blancanieves debe estar sobre un cultivo de una huerta atacada por una plaga y se
-usará la letra I para activarlo sobre toda la huerta.<br>
+To use <b>insecticide</b>, Snow White must be on a crop affected by pests and press I to activate it on the whole plot.<br>
 
-Para usar el <b>fertilizante</b>, Blancanieves debe estar sobre un cultivo de una huerta y se usará la letra F para
-activarlo sobre toda la huerta.<br>
+To use <b>fertilizer</b>, Snow White must be on a plot's crop and press F to activate it on the whole plot.<br>
 
-Para cosechar lo sembrado, se podrá hacer posicionándose sobre los cultivos cuando crezcan las plantas y cuando
-no haya pasado el tiempo límite para hacerlo. Si se posiciona sobre un cultivo que aún no está listo, no debe suceder
-nada. No se podrán cosechar verduras que tengan plaga.<br>
+To harvest, simply stand on a crop when the plant is ready and still within the valid time window.  
+If the crop isn’t ready, nothing happens. Vegetables affected by pests cannot be harvested.<br>
 
 <h2>Game Goal</h2>
-Para ganar el juego, Blancanieves tiene que ganar un total de 1000 monedas. La cantidad de monedas inicial
-dependerá del enanito resultante del TP1:<br>
-   Gruñón: 150 monedas<br>
-   Dormilón: 200 monedas<br>
-   Sabio: 250 monedas<br>
-   Feliz: 300 monedas<br>
+To win the game, Snow White must collect a total of 1000 coins. The starting amount depends on the dwarf from TP1:<br>
+   Gruñón: 150 coins<br>
+   Dormilón: 200 coins<br>
+   Sabio: 250 coins<br>
+   Feliz: 300 coins<br>
 
 <h2>Characters Letters</h2>
 <ul>
@@ -130,4 +124,4 @@ dependerá del enanito resultante del TP1:<br>
   <li>Brócoli: B.</li>
 </ul>
 
-<h2>Hope you like it! made by Tomás Bobbett in 2023</h2>
+<h2>Hope you like it! Made by Tomás Bobbett in 2023</h2>
