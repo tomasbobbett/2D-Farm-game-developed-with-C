@@ -28,6 +28,9 @@ On both Windows and macOS, you can compile and run the game using a terminal.
 (Make sure Xcode Command Line Tools are installed)<br>
 
 <h2>GAME INFO</h2>
+
+![Game Screenshot](tablero juego en C.jpg)
+
 <p>Since Snow White moved in with the dwarfs, she inspired them to care for plants and enjoy the outdoors. And since the mine job is no longer enough and they’re struggling to make ends meet, they decided to invest in buying some plots of land to grow vegetables, sell them, and save some coins.</p><br>
 We must help Snow White grow her garden to reach her savings goal of 1000 coins. If she runs out of coins, the game is over.  
 The game consists of a field where there are 3 plots (3x3) with different vegetables. You must plant seeds, harvest them once they’ve grown, and take them to the depot to sell and earn coins.  
