@@ -115,3 +115,19 @@ dependerá del enanito resultante del TP1:<br>
    Dormilón: 200 monedas<br>
    Sabio: 250 monedas<br>
    Feliz: 300 monedas<br>
+
+<h2>Characters Letters</h2>
+<ul>
+  <li>Blancanieves: S.</li>
+  <li>Cultivo vacío: C.</li>
+  <li>Depósito: D.</li>
+  <li>Espinas: E.</li>
+  <li>Plagas: P.</li>
+  <li>Fertilizantes: F</li>
+  <li>Lechuga: L.</li>
+  <li>Tomate: T.</li>
+  <li>Zanahoria: Z.</li>
+  <li>Brócoli: B.</li>
+</ul>
+
+<h2>Hope you like it! made by Tomás Bobbett in 2023</h2>
